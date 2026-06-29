@@ -50,3 +50,31 @@
                2.3) Если там неправильный адрес, выполни:
                         git remote remove origin
                         git remote add origin https://github.com/darkside2007darkside-coder/Test-before-exam.git
+
+
+3) в терминале у вас попросит
+    Username for 'https://github.com': darkside2007darkside-coder <- введите свой
+    Password for 'https://darkside2007darkside-coder@github.com': (тут спращивают про токен, а не про гугл пароль)
+
+    3.1) проблема: не знать пароль
+
+    3.1) рещение:
+            введите это в хром:    GitHub Developer settings
+
+            Затем:
+                1) Внизу слева выбери Developer settings.
+                2) Нажми Personal access tokens.
+                3) Выбери Tokens (classic).
+                4) Нажми Generate new token (classic).
+                5) Введи название, например:
+                                            Git Ubuntu
+                6) Отметь галочку repo.
+                7) Нажми Generate token.
+                8) Скопируй токен (он показывается только один раз).
+
+----------------------------------------------------------------------------------------
+    Теперь каждый раз после изменений тебе достаточно выполнять всего три команды:
+        git add .
+        git commit -m "Что изменил"
+        git push
+----------------------------------------------------------------------------------------
