@@ -1,0 +1,52 @@
+
+1) мы должны скачать сам GitHub:
+    "    sudo apt install git      "
+
+        1.1) eли хотите узнать вернсию своего GitHub:
+              "      sudo git --version      "
+
+
+2) использовать в терминале этот код (я например ввел в самом пайчарме)
+    git init
+    git add .
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/darkside2007darkside-coder/Test-before-exam.git
+    git push -u origin main
+
+    2.1) проблема:
+    если выдает эту ошибку то значит надо насторить Git, 1 раз
+
+        Author identity unknown
+
+        *** Please tell me who you are.
+
+        Run
+
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+
+        to set your account's default identity.
+        Omit --global to set the identity only in this repository.
+
+        fatal: unable to auto-detect email address (got 'abror@abror-Dell-G15-5530.(none)')
+        error: remote origin already exists.
+        error: src refspec main does not match any
+        error: failed to push some refs to 'https://github.com/darkside2007darkside-coder/Test-before-exam.git'
+
+    2.1) рещение:
+            git config --global user.name "Abror" <- ставьте свою
+            git config --global user.email "darkside2007darkside@gmail.com" <- ставьте свою
+
+        проверяем работает ли:
+            git config --global --list
+
+        2.2) если появилась ошибка:
+                error: remote origin already exists.
+
+        2.2) рещение:
+                Проверь: git remote -v
+
+               2.3) Если там неправильный адрес, выполни:
+                        git remote remove origin
+                        git remote add origin https://github.com/darkside2007darkside-coder/Test-before-exam.git
